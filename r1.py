@@ -6,7 +6,7 @@ def read_file(filename):
     return lines
 def converse(lines):
     new = []
-    name = '123'
+    name = None
     for line in lines:
         if line == 'Allen':
             name = 'Allen'
@@ -14,7 +14,7 @@ def converse(lines):
         elif line == 'Tom':
             name = 'Tom'
             continue
-        elif name != '123' :   
+        elif name:   
             new.append(name  + ': ' + line)
     return new
 def write_file(filename, lines):
